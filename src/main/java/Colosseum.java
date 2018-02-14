@@ -72,10 +72,23 @@ public class Colosseum {
      *         Implement this function.
      */
     public static Pokemon buildPokemon() {
-        int hitPoints;
+        int attackLevel;
+        int defenseLevel;
         Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter name: ");
+        String name = sc.nextLine();
+        System.out.println("Please enter hit points: ");
+        int hitPoints = sc.nextInt();
         while (hitPoints < 1 || hitPoints > MAX_HIT_POINTS) {
             hitPoints = sc.nextInt();
+        }
+        while (attackLevel < 1) {
+            System.out.println("Invalid. Please print out another attack level");
+            attackLevel = sc.nextInt();
+        }
+        while (defenseLevel < 1) {
+            System.out.println("Invalid. Please print out another defense level.");
+            defenseLevel = sc.nextInt();
         }
         return null;
     }
